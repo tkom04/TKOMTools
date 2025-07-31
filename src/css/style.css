@@ -98,3 +98,9 @@ button:hover {
     gap: 1rem;
   }
 }
+.result-row {
+  margin-top: 0.5em;
+}
+.terra-lucid-btn.active {
+  background: var(--accent-2);
+}

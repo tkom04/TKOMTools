@@ -7,7 +7,7 @@
     <meta name="description" content="Charm Reroll Cost calculator" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body onload="calcReroll()">
     <header>
       <nav>
         <a href="index.html">Home</a>
@@ -20,8 +20,25 @@
       </nav>
     </header>
     <main>
-      <h1>Charm Reroll</h1>
-      <p>Calculator coming soon.</p>
+      <h1>Charm Reroll Cost</h1>
+      <div class="form-row">
+        <label
+          >Available Books
+          <input id="books" type="number" min="0" value="0" />
+        </label>
+      </div>
+      <button onclick="calcReroll()">Calculate</button>
+      <button onclick="setExampleBooks()">Example</button>
+      <button onclick="exportRerollResults()">Copy Results</button>
+      <div class="result-row">
+        Total Rerolls Possible: <span id="rolls">0</span>
+      </div>
+      <div class="result-row">
+        Optimal reset after roll: <span id="reset">0</span>
+      </div>
+      <div class="result-row">
+        Books remaining after rerolls: <span id="remaining">0</span>
+      </div>
     </main>
     <script src="js/main.js"></script>
   </body>

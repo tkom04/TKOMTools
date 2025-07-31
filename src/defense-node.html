@@ -7,7 +7,7 @@
     <meta name="description" content="Defense node calculator" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body onload="calcDefense()">
     <header>
       <nav>
         <a href="index.html">Home</a>
@@ -21,7 +21,20 @@
     </header>
     <main>
       <h1>Defense Node</h1>
-      <p>Calculator coming soon.</p>
+      <div class="form-row">
+        <label
+          >Flat Armor <input id="flatArmor" type="number" min="0" value="0"
+        /></label>
+        <label
+          >Flat DR (%)
+          <input id="flatDR" type="number" min="0" step="0.01" value="0"
+        /></label>
+      </div>
+      <button onclick="calcDefense()">Calculate</button>
+      <button onclick="setExampleDefense()">Example</button>
+      <button onclick="exportDefenseResults()">Copy Results</button>
+      <div class="result-row">Armor %: <span id="armorPct">0</span></div>
+      <div class="result-row">Total DR: <span id="totalRed">0</span></div>
     </main>
     <script src="js/main.js"></script>
   </body>
