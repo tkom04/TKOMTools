@@ -8,9 +8,32 @@
       localStorage.setItem("theme", next);
     });
   }
+  const menuToggle = document.getElementById("menuToggle");
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      document.querySelector(".nav-links").classList.toggle("open");
+    });
+  }
   const saved = localStorage.getItem("theme");
   if (saved) {
     document.documentElement.setAttribute("data-theme", saved);
+  }
+  const cards = document.querySelectorAll(".tool-card");
+  if (cards.length && "IntersectionObserver" in window) {
+    const obs = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+    cards.forEach((c) => obs.observe(c));
+  } else {
+    cards.forEach((c) => c.classList.add("visible"));
   }
 })();
 
