@@ -118,6 +118,30 @@ button:hover {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--fg);
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+}
 @media (min-width: 600px) {
   .form-row {
     display: flex;
@@ -173,14 +197,27 @@ button:hover {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero h1 {
   font-size: 3rem;
   margin: 0 0 1rem;
+  animation: fadeInUp 0.6s both 0.2s;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  animation: fadeInUp 0.6s both 0.4s;
 }
 
 .cta-button {
@@ -190,6 +227,7 @@ button:hover {
   border-radius: 4px;
   font-family: var(--heading-font);
   display: inline-block;
+  animation: fadeInUp 0.6s both 0.6s;
 }
 
 .cta-button:hover {
@@ -215,14 +253,22 @@ button:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transform 0.3s,
+    box-shadow 0.2s,
+    opacity 0.3s;
 }
 
 .tool-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tool-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .tool-icon {
@@ -237,4 +283,28 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .hero::after,
+  .hero h1,
+  .hero p,
+  .cta-button,
+  .tool-card {
+    animation: none !important;
+    transition: none !important;
+  }
 }
