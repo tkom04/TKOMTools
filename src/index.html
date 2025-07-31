@@ -13,14 +13,15 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="cast-timing.html">Cast Timing</a>
-        <a href="charm-reroll.html">Charm Reroll</a>
-        <a href="defense-node.html">Defense Node</a>
-        <a href="terra-buff.html">Terra Buff</a>
-        <a href="patch-notes.html">Patch Notes</a>
-        <!-- <a href="#">Team Builder</a> -->
+      <nav class="navbar">
+        <a href="index.html" class="logo">TKOMTools</a>
+        <div class="nav-links">
+          <a href="cast-timing.html">Cast Timing</a>
+          <a href="charm-reroll.html">Charm Reroll</a>
+          <a href="defense-node.html">Defense Node</a>
+          <a href="terra-buff.html">Terra Buff</a>
+          <a href="patch-notes.html">Patch Notes</a>
+        </div>
         <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
       </nav>
     </header>
@@ -33,22 +34,124 @@
 
       <section id="tools" class="tool-grid">
         <a class="tool-card" href="cast-timing.html">
+          <svg class="tool-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="8"
+            />
+            <line
+              x1="50"
+              y1="50"
+              x2="50"
+              y2="30"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+            <line
+              x1="50"
+              y1="50"
+              x2="65"
+              y2="55"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+          </svg>
           <h2>Cast Timing</h2>
           <p>Find the optimal casting speed.</p>
         </a>
         <a class="tool-card" href="charm-reroll.html">
+          <svg class="tool-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path
+              d="M50 15a35 35 0 1 0 31 18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+            <polygon points="70,10 90,20 70,30" fill="currentColor" />
+          </svg>
           <h2>Charm Reroll</h2>
           <p>Estimate reroll costs.</p>
         </a>
         <a class="tool-card" href="defense-node.html">
+          <svg class="tool-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path
+              d="M50 10 L80 25 V55 C80 70 65 85 50 90 35 85 20 70 20 55 V25 Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="8"
+            />
+          </svg>
           <h2>Defense Node</h2>
           <p>Calculate damage reduction.</p>
         </a>
         <a class="tool-card" href="terra-buff.html">
+          <svg class="tool-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path
+              d="M50 10 C30 40 30 70 50 90 C70 70 70 40 50 10 Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="8"
+            />
+            <line
+              x1="50"
+              y1="50"
+              x2="50"
+              y2="90"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+          </svg>
           <h2>Terra Buff</h2>
           <p>Analyze Terra damage buffs.</p>
         </a>
         <a class="tool-card" href="patch-notes.html">
+          <svg class="tool-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <rect
+              x="20"
+              y="10"
+              width="60"
+              height="80"
+              rx="8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="8"
+            />
+            <line
+              x1="30"
+              y1="30"
+              x2="70"
+              y2="30"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+            <line
+              x1="30"
+              y1="50"
+              x2="70"
+              y2="50"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+            <line
+              x1="30"
+              y1="70"
+              x2="55"
+              y2="70"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+          </svg>
           <h2>Patch Notes</h2>
           <p>See recent updates.</p>
         </a>
