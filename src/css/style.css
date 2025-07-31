@@ -26,6 +26,13 @@ body {
   background: var(--bg);
   color: var(--fg);
   line-height: 1.5;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position:
+    0 0,
+    20px 20px;
 }
 h1,
 h2,
@@ -40,8 +47,9 @@ a:hover {
   text-decoration: underline;
 }
 header {
-  background: #000814;
+  background: rgba(0, 8, 20, 0.9);
   padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 main {
   padding: 1rem;
@@ -93,6 +101,9 @@ button:hover {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
 }
 
 .navbar .logo {
@@ -219,4 +230,11 @@ button:hover {
   height: 48px;
   margin-bottom: 0.5rem;
   color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
