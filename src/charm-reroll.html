@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charm Reroll - TKOMTools</title>
+    <meta name="description" content="Charm Reroll Cost calculator" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="calcReroll()">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cast-timing.html">Cast Timing</a>
+        <a href="charm-reroll.html">Charm Reroll</a>
+        <a href="defense-node.html">Defense Node</a>
+        <a href="terra-buff.html">Terra Buff</a>
+        <a href="patch-notes.html">Patch Notes</a>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+      </nav>
+    </header>
+    <main>
+      <h1>Charm Reroll Cost</h1>
+      <div class="form-row">
+        <label
+          >Available Books
+          <input id="books" type="number" min="0" value="0" />
+        </label>
+      </div>
+      <button onclick="calcReroll()">Calculate</button>
+      <button onclick="setExampleBooks()">Example</button>
+      <button onclick="exportRerollResults()">Copy Results</button>
+      <div class="result-row">
+        Total Rerolls Possible: <span id="rolls">0</span>
+      </div>
+      <div class="result-row">
+        Optimal reset after roll: <span id="reset">0</span>
+      </div>
+      <div class="result-row">
+        Books remaining after rerolls: <span id="remaining">0</span>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

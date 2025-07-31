@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Defense Node - TKOMTools</title>
+    <meta name="description" content="Defense node calculator" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="calcDefense()">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cast-timing.html">Cast Timing</a>
+        <a href="charm-reroll.html">Charm Reroll</a>
+        <a href="defense-node.html">Defense Node</a>
+        <a href="terra-buff.html">Terra Buff</a>
+        <a href="patch-notes.html">Patch Notes</a>
+        <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+      </nav>
+    </header>
+    <main>
+      <h1>Defense Node</h1>
+      <div class="form-row">
+        <label
+          >Flat Armor <input id="flatArmor" type="number" min="0" value="0"
+        /></label>
+        <label
+          >Flat DR (%)
+          <input id="flatDR" type="number" min="0" step="0.01" value="0"
+        /></label>
+      </div>
+      <button onclick="calcDefense()">Calculate</button>
+      <button onclick="setExampleDefense()">Example</button>
+      <button onclick="exportDefenseResults()">Copy Results</button>
+      <div class="result-row">Armor %: <span id="armorPct">0</span></div>
+      <div class="result-row">Total DR: <span id="totalRed">0</span></div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
