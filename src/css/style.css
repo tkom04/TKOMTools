@@ -104,3 +104,59 @@ button:hover {
 .terra-lucid-btn.active {
   background: var(--accent-2);
 }
+
+.hero {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--fg);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-family: var(--heading-font);
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tool-card {
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
